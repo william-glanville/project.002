@@ -2,18 +2,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 
-DATA_DIR = ROOT / "data"
+DIR_DATA = ROOT / "data"
+DIR_LOGGS = ROOT / "logs"
 
-DATA_RAW01_DIR = DATA_DIR / "raw.01"
-DATA_CHROMA_DB_DIR = DATA_DIR / "chroma"
+DATA_RAW01_DIR = DIR_DATA / "raw.01/"
+DATA_CHROMA_DB_DIR = DIR_DATA / "chroma/"
 
+FILE_TYPE_ANY = ".*"
+FILE_TYPE_BASIC = r"\.(pdf|txt|md|docx)$"
+FILE_TYPE_TEXT = r"\.(txt|md)$"
+FILE_TYPE_PDF = r"\.(pdf)$"
+FILE_TYPE_DOCX = r"\.(docx)$"
+FILE_TYPE_PPTX = r"\.(pptx)$"
 
-
-
-
-FILE_TYPE_PDF = ".pdf"
-FILE_TYPE_DOCX = ".docx"
-FILE_TYPE_PPTX = ".pptx"
-
+def get_log_file(name):
+    return DIR_LOGGS / f"{name}.log"
 
 MODEL_EMBED_NAME = "all-MiniLM-L6-v2"
+MODEL_CHUNK_TAGGER_NAME = "facebook/bart-large-mnli"
