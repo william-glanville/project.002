@@ -12,6 +12,8 @@ from sentence_transformers import SentenceTransformer
 from PyPDF2 import PdfReader
 from docx import Document
 from semantic_filter import SemanticFilter
+from reference_builder import ReferenceBuilder
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -139,6 +141,7 @@ class Ingestor:
     def __init__(self, config: IngestorConfig):
         self.config = config
         self.filter = SemanticFilter(logger=logging, model_name=config.embedder_model_name, threshold=0.3)
+        self.reference_builder = ReferenceBuilder()
         self.crawler = FileCrawler(config.collection_path, config.file_filter_pattern)
         self.parser_factory = FileParserFactory()
         self.embedder = ChunkEmbedder(
@@ -172,10 +175,14 @@ class Ingestor:
                 logger.info(f"Parsing file: {path}")
                 raw_chunks = self.parser_factory.extract_chunks(path)
                 chunked = self.embedder.chunk_text(raw_chunks)
-                filtered = self.filter.filter_chunks(chunked, raw_chunks)
-                embedded = self.embedder.generate_embeddings(chunked)
+                # Build reference set from chunked data
+                reference_texts = self.reference_builder.build_reference_set(chunked)
+                filtered = self.filter.filter_chunks(chunked, reference_texts)
+                embedded = self.embedder.generate_embeddings(filtered)
                 all_chunks.extend(embedded)
                 logger.info(f"Processed {len(embedded)} chunks from {path}")
+                logger.info(f"Generated {len(reference_texts)} reference sentences from extracted keywords")
+                logger.info(f"Filtered down to {len(filtered)} chunks after semantic filtering")
             except Exception as e:
                 logger.warning(f"Failed to process file {path}: {str(e)}")
                 continue
