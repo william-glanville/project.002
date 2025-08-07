@@ -1,3 +1,4 @@
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -18,5 +19,12 @@ FILE_TYPE_PPTX = r"\.(pptx)$"
 def get_log_file(name):
     return DIR_LOGGS / f"{name}.log"
 
+def get_data_file(name):
+    return DIR_DATA / f"{name}"
+
 MODEL_EMBED_NAME = "all-MiniLM-L6-v2"
 MODEL_CHUNK_TAGGER_NAME = "facebook/bart-large-mnli"
+
+
+def safe_text(text):
+    return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")

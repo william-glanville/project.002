@@ -6,12 +6,14 @@ import json
 import hashlib
 import shelve
 
-
 from sklearn.feature_extraction.text import TfidfVectorizer
+
+import constants
 
 logger = logging.getLogger(__name__)
 
-SYSTEM_PROMPT = "You are a helpful assistant that generates reference sentences for a given keyword in a given context."
+SUMMARY_PROMPT = "Summarize the following document as a concise statement that can be used as a title or subject."
+REFERENCE_PROMPT = "You are a helpful assistant that generates reference sentences for a given keyword in a given context."
 PROMPT = "Generate {n} informative sentences about {keyword} in the context of {context} that is suitable for educational or technical contexts. Return the result as a JSON array of strings."
 
 class ReferenceCache:
@@ -47,11 +49,11 @@ class LocalLLMClient:
         self.headers = headers or {"Content-Type": "application/json"}
         self.timeout = timeout
 
-    def generate(self, prompt, max_tokens=256, temperature=0.7, retries=3):
+    def generate(self, prompt, system_prompt, max_tokens=256, temperature=0.7, retries=3):
         payload = {
             "model": self.model_id,
             "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}
             ],
             "max_tokens": max_tokens,
@@ -76,11 +78,35 @@ class LocalLLMClient:
         raise RuntimeError("Failed to get response from LMStudio after retries")
 
 
+class SubjectExtractor:
+    def __init__(self, llm_client, max_chunks=10):
+        self.llm = llm_client
+        self.max_chunks = max_chunks
+
+    def extract_subject(self, chunks):
+        sample_texts = [chunk["text"] for chunk in chunks[:self.max_chunks] if chunk["text"].strip()]
+        combined = "\n".join(sample_texts)
+
+        prompt = (
+            "Based on the following document excerpts, summarize the main subject or theme in one concise statement. Delimit the suggested subject with **.\n\n"
+            f"{combined}\n\nSubject:"
+        )
+
+        try:
+            subject = self.llm.generate(prompt, SUMMARY_PROMPT, max_tokens=50)
+            match = re.search(r"\*\*(.*?)\*\*", subject)
+            result = match.group(1) if match else subject
+            logger.info(f"Extracted subject: {constants.safe_text(result)}")
+            return result
+        except Exception as e:
+            logger.warning(f"Failed to extract subject context: {str(e)}")
+            return "General Document"
+
 class ReferenceBuilder:
-    def __init__(self, max_keywords=10, sentences_per_keyword=2, cache=None):
+    def __init__(self, llm_client, max_keywords=10, sentences_per_keyword=2, cache=None):
         self.max_keywords = max_keywords
         self.sentences_per_keyword = sentences_per_keyword
-        self.llm = LocalLLMClient()
+        self.llm = llm_client
         self.parser = OutputParser(mode="json")
         self.cache = cache or ReferenceCache()
 
@@ -88,11 +114,23 @@ class ReferenceBuilder:
         serialized = json.dumps(chunks, sort_keys=True)
         return hashlib.md5(serialized.encode()).hexdigest()
 
-    def extract_keywords(self, chunks):
-        texts = [chunk["text"] for chunk in chunks if chunk["text"].strip()]
-        vectorizer = TfidfVectorizer(stop_words="english", max_features=self.max_keywords)
+    def clean_tokens(self, tokens):
+        return [
+            token for token in tokens
+            if token.isalpha() and len(token) > 3  # remove numbers and short non-descriptive words
+        ]
+
+    def extract_keywords_tfidf(self, texts):
+        vectorizer = TfidfVectorizer(stop_words='english', max_features=1000)
         X = vectorizer.fit_transform(texts)
         keywords = vectorizer.get_feature_names_out()
+        keywords = self.clean_tokens(keywords)
+
+        return keywords[:self.max_keywords]
+
+    def extract_keywords(self, chunks):
+        texts = [chunk["text"] for chunk in chunks if chunk["text"].strip()]
+        keywords = self.extract_keywords_tfidf(texts)
         logger.info(f"Extracted keywords: {keywords}")
         return keywords
 
@@ -101,7 +139,7 @@ class ReferenceBuilder:
         for kw in keywords:
             prompt = PROMPT.format(n=self.sentences_per_keyword, keyword=kw, context=context )
             try:
-                response = self.llm.generate(prompt)
+                response = self.llm.generate(prompt,REFERENCE_PROMPT)
                 sentences = self._split_sentences(response)
                 references.extend(sentences)
             except Exception as e:

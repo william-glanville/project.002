@@ -1,58 +1,47 @@
 import os
+import json
+import logging
 import constants
-
-from ingestor import FileCrawler, PDFParser, ChunkEmbedder, ChromaDBHandler, MySQLDBHandler
+from ingestor import Ingestor, IngestorConfig
 
 # --- Config ---
-PDF_FOLDER = constants.DATA_RAW01_DIR
+SUBJECT_01_FOLDER = constants.DATA_RAW01_DIR
 COLLECTION_NAME = "159.341"
 CHUNK_SIZE = 180
 OVERLAP = 40
-
+RESET_DATASTORE = True
 
 def main():
-    # Step 1: Crawl PDF Files
-    crawler = FileCrawler(PDF_FOLDER)
-    pdf_files = crawler.get_pdf_files()
-    print(f"Found {len(pdf_files)} PDF(s):", pdf_files)
+    logging.basicConfig(level=logging.INFO)
+    logger = logging.getLogger( str(constants.get_log_file("test_ingestor")) )
 
-    # Step 2: Initialize Components
-    parser = PDFParser()
-    embedder = ChunkEmbedder(chunk_size=CHUNK_SIZE, overlap=OVERLAP)
-    vector_db = ChromaDBHandler(location=constants.DATA_CHROMA_DB_DIR, collection_name=COLLECTION_NAME)
-    mysql_sync = MySQLDBHandler()
+    # Step 1: Configure ingestion
+    config = IngestorConfig(
+        collection_name=COLLECTION_NAME,
+        collection_path=SUBJECT_01_FOLDER,
+        reset_datastore=RESET_DATASTORE
+    )
 
-    # step 3: Initialize MySQL/ChromasDB
-    mysql_sync.reset_chunk_metadata_table()
-    vector_db.reset_all_collections()
+    # Step 2: Initialize ingestor
+    ingestor = Ingestor(config)
 
-    all_chunks = []
+    # Step 3: Run ingestion
+    logger.info("Starting test ingestion...")
+    ingestor.ingest()
+    logger.info("Ingestion complete.")
 
-    # Step 4: Process Each PDF
-    for filepath in pdf_files:
-        print(f"\nProcessing: {filepath}")
-        pages = parser.extract_text(filepath)
-        print(f"  → Pages extracted: {len(pages)}")
+    # Step 4: Optional output summary
+    output_path = os.path.join("output", f"{COLLECTION_NAME}_summary.json")
+    os.makedirs("output", exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump({
+            "collection_name": COLLECTION_NAME,
+            "source_path": SUBJECT_01_FOLDER,
+            "reset": RESET_DATASTORE
+        }, f, indent=2)
 
-        chunks = embedder.chunk_text(collection_name=COLLECTION_NAME, pages=pages, source_file=filepath)
-        print(f"  → Chunks created: {len(chunks)}")
+    logger.info(f"📄 Summary saved to {output_path}")
 
-        chunks = embedder.generate_embeddings(chunks)
-        print("  → Embeddings generated")
-
-        vector_db.insert_chunks(chunks)
-        print("  → Chunks inserted into ChromaDB")
-
-        mysql_sync.insert_chunk_metadata(chunks)
-        print("  → Metadata synced to MySQL")
-
-        all_chunks.extend(chunks)
-
-    # Optional: Print summary
-    print(f"\nTotal chunks processed: {len(all_chunks)}")
-
-    # Cleanup
-    mysql_sync.close()
 
 if __name__ == "__main__":
     main()

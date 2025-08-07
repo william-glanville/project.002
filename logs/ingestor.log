@@ -1,0 +1,508 @@
+2025-08-07 12:30:58,739 [INFO] Use pytorch device_name: cpu
+2025-08-07 12:30:58,739 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 12:31:04,051 [INFO] Use pytorch device_name: cpu
+2025-08-07 12:31:04,051 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 12:31:07,025 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 12:31:09,646 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 12:31:11,529 [INFO] Collection '159.341' dropped.
+2025-08-07 12:31:11,670 [INFO] Collection '159.341' recreated.
+2025-08-07 12:48:27,067 [INFO] Use pytorch device_name: cpu
+2025-08-07 12:48:27,067 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 12:48:29,971 [INFO] Use pytorch device_name: cpu
+2025-08-07 12:48:29,971 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 12:48:33,415 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 12:48:35,991 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 12:48:36,266 [INFO] Collection '159.341' dropped.
+2025-08-07 12:48:36,399 [INFO] Collection '159.341' recreated.
+2025-08-07 12:48:36,800 [INFO] Resetting ChromaDB and MySQL datastore...
+2025-08-07 12:51:46,598 [INFO] Use pytorch device_name: cpu
+2025-08-07 12:51:46,598 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 12:51:49,553 [INFO] Use pytorch device_name: cpu
+2025-08-07 12:51:49,553 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 12:51:52,087 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 12:51:54,621 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 13:01:47,220 [INFO] Use pytorch device_name: cpu
+2025-08-07 13:01:47,220 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:01:50,345 [INFO] Use pytorch device_name: cpu
+2025-08-07 13:01:50,345 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:01:53,089 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:01:55,643 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 13:01:55,911 [INFO] Collection '159.341' dropped.
+2025-08-07 13:01:56,056 [INFO] Collection '159.341' recreated.
+2025-08-07 13:01:56,409 [INFO] Resetting ChromaDB and MySQL datastore...
+2025-08-07 13:01:56,488 [INFO] Collection '159.341' dropped.
+2025-08-07 13:01:56,633 [INFO] Collection '159.341' recreated.
+2025-08-07 13:03:31,377 [INFO] Use pytorch device_name: cpu
+2025-08-07 13:03:31,377 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:03:34,294 [INFO] Use pytorch device_name: cpu
+2025-08-07 13:03:34,295 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:03:37,021 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:03:39,581 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 13:03:39,853 [INFO] Collection '159.341' dropped.
+2025-08-07 13:03:39,986 [INFO] Collection '159.341' recreated.
+2025-08-07 13:03:40,352 [INFO] Resetting ChromaDB and MySQL datastore...
+2025-08-07 13:03:40,430 [INFO] Collection '159.341' dropped.
+2025-08-07 13:03:40,563 [INFO] Collection '159.341' recreated.
+2025-08-07 13:03:40,646 [INFO] Chunk metadata table reset.
+2025-08-07 13:03:40,648 [INFO] Starting ingestion for collection: 159.341
+2025-08-07 13:03:40,648 [INFO] Found 33 files matching pattern: \.(pdf|txt|md|docx)$
+2025-08-07 13:03:40,648 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf
+2025-08-07 13:03:40,783 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:40,783 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-02-Programming-Languages-Part-1.pdf
+2025-08-07 13:03:41,191 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-02-Programming-Languages-Part-1.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:41,191 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-03-Programming-Languages-Part-2.pdf
+2025-08-07 13:03:41,405 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-03-Programming-Languages-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:41,405 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-04-Programming-Languages-Part-3.pdf
+2025-08-07 13:03:41,637 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-04-Programming-Languages-Part-3.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:41,637 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-05-Programming-Languages-Part-4.pdf
+2025-08-07 13:03:41,746 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-05-Programming-Languages-Part-4.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:41,746 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-06-Imperative-Programming-Part-1.pdf
+2025-08-07 13:03:42,060 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-06-Imperative-Programming-Part-1.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:42,060 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-07-Imperative-Programming-Part-2.pdf
+2025-08-07 13:03:42,347 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-07-Imperative-Programming-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:42,347 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-08-Imperative-Programming-Part-3.pdf
+2025-08-07 13:03:42,855 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-08-Imperative-Programming-Part-3.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:42,855 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-09-Lambda-Calculus-Part-1.pdf
+2025-08-07 13:03:43,038 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-09-Lambda-Calculus-Part-1.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:43,038 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-10-Lambda-Calculus-Part-2.pdf
+2025-08-07 13:03:43,254 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-10-Lambda-Calculus-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:43,254 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-11-Lambda-Calculus-Part-3.pdf
+2025-08-07 13:03:43,441 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-11-Lambda-Calculus-Part-3.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:43,441 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1 (1).pdf
+2025-08-07 13:03:43,859 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1 (1).pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:43,860 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1.pdf
+2025-08-07 13:03:44,356 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:44,356 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2 (1).pdf
+2025-08-07 13:03:44,670 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2 (1).pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:44,670 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2.pdf
+2025-08-07 13:03:45,097 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:45,097 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-14-Threads.pdf
+2025-08-07 13:03:45,420 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-14-Threads.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:45,420 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-15-Synchronisation-I.pdf
+2025-08-07 13:03:46,237 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-15-Synchronisation-I.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:46,238 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-16-Synchronisation-Part-2.pdf
+2025-08-07 13:03:46,418 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-16-Synchronisation-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:46,418 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-17-Synchronisation-Part-3.pdf
+2025-08-07 13:03:46,610 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-17-Synchronisation-Part-3.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:46,610 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-18-Deadlock-I.pdf
+2025-08-07 13:03:47,201 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-18-Deadlock-I.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:47,201 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-19-Deadlock-II.pdf
+2025-08-07 13:03:47,433 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-19-Deadlock-II.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:47,433 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-20-Concurrent-Programming.pdf
+2025-08-07 13:03:48,085 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-20-Concurrent-Programming.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:48,085 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-21-Concurrent-Programming-Parallelism.pdf
+2025-08-07 13:03:48,631 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-21-Concurrent-Programming-Parallelism.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:48,631 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-22-Concurrent-Programming-Algorithm-Design.pdf
+2025-08-07 13:03:48,780 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-22-Concurrent-Programming-Algorithm-Design.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:48,780 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-23-Concurrent-Programming-Paradigms.pdf
+2025-08-07 13:03:49,013 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-23-Concurrent-Programming-Paradigms.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:49,013 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-24-Program.pdf
+2025-08-07 13:03:49,127 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-24-Program.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:49,127 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-25-std-threads.pdf
+2025-08-07 13:03:49,356 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-25-std-threads.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:49,356 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-26-std-threads-2.pdf
+2025-08-07 13:03:49,538 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-26-std-threads-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:49,538 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-27-OpenMP-part-1.pdf
+2025-08-07 13:03:49,791 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-27-OpenMP-part-1.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:49,792 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-28-OpenMP-Part-2.pdf
+2025-08-07 13:03:50,201 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-28-OpenMP-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:50,201 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-29-Java-Concurrency.pdf
+2025-08-07 13:03:50,386 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-29-Java-Concurrency.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:50,386 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-30-Java-Concurrency-Part-2.pdf
+2025-08-07 13:03:50,544 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-30-Java-Concurrency-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:50,544 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-31-Java-Concurrency-Part-3.pdf
+2025-08-07 13:03:50,742 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-31-Java-Concurrency-Part-3.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:03:50,742 [INFO] Storing 0 chunks in ChromaDB and MySQL...
+2025-08-07 13:07:58,694 [INFO] Use pytorch device_name: cpu
+2025-08-07 13:07:58,694 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:08:01,591 [INFO] Use pytorch device_name: cpu
+2025-08-07 13:08:01,591 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:08:04,156 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:08:06,744 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 13:08:07,023 [INFO] Collection '159.341' dropped.
+2025-08-07 13:08:07,157 [INFO] Collection '159.341' recreated.
+2025-08-07 13:08:07,547 [INFO] Resetting ChromaDB and MySQL datastore...
+2025-08-07 13:08:07,634 [INFO] Collection '159.341' dropped.
+2025-08-07 13:08:07,767 [INFO] Collection '159.341' recreated.
+2025-08-07 13:08:07,846 [INFO] Chunk metadata table reset.
+2025-08-07 13:08:07,848 [INFO] Starting ingestion for collection: 159.341
+2025-08-07 13:08:07,849 [INFO] Found 33 files matching pattern: \.(pdf|txt|md|docx)$
+2025-08-07 13:08:07,849 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf
+2025-08-07 13:08:07,935 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:07,935 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-02-Programming-Languages-Part-1.pdf
+2025-08-07 13:08:08,347 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-02-Programming-Languages-Part-1.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:08,347 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-03-Programming-Languages-Part-2.pdf
+2025-08-07 13:08:08,522 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-03-Programming-Languages-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:08,523 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-04-Programming-Languages-Part-3.pdf
+2025-08-07 13:08:08,757 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-04-Programming-Languages-Part-3.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:08,757 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-05-Programming-Languages-Part-4.pdf
+2025-08-07 13:08:08,870 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-05-Programming-Languages-Part-4.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:08,871 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-06-Imperative-Programming-Part-1.pdf
+2025-08-07 13:08:09,185 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-06-Imperative-Programming-Part-1.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:09,186 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-07-Imperative-Programming-Part-2.pdf
+2025-08-07 13:08:09,452 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-07-Imperative-Programming-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:09,452 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-08-Imperative-Programming-Part-3.pdf
+2025-08-07 13:08:09,979 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-08-Imperative-Programming-Part-3.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:09,980 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-09-Lambda-Calculus-Part-1.pdf
+2025-08-07 13:08:10,166 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-09-Lambda-Calculus-Part-1.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:10,166 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-10-Lambda-Calculus-Part-2.pdf
+2025-08-07 13:08:10,360 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-10-Lambda-Calculus-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:10,360 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-11-Lambda-Calculus-Part-3.pdf
+2025-08-07 13:08:10,536 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-11-Lambda-Calculus-Part-3.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:10,537 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1 (1).pdf
+2025-08-07 13:08:11,079 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1 (1).pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:11,079 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1.pdf
+2025-08-07 13:08:11,457 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:11,457 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2 (1).pdf
+2025-08-07 13:08:11,762 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2 (1).pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:11,762 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2.pdf
+2025-08-07 13:08:12,205 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:12,205 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-14-Threads.pdf
+2025-08-07 13:08:12,499 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-14-Threads.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:12,499 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-15-Synchronisation-I.pdf
+2025-08-07 13:08:13,435 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-15-Synchronisation-I.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:13,435 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-16-Synchronisation-Part-2.pdf
+2025-08-07 13:08:13,607 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-16-Synchronisation-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:13,608 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-17-Synchronisation-Part-3.pdf
+2025-08-07 13:08:13,799 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-17-Synchronisation-Part-3.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:13,799 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-18-Deadlock-I.pdf
+2025-08-07 13:08:14,277 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-18-Deadlock-I.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:14,277 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-19-Deadlock-II.pdf
+2025-08-07 13:08:14,539 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-19-Deadlock-II.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:14,539 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-20-Concurrent-Programming.pdf
+2025-08-07 13:08:15,202 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-20-Concurrent-Programming.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:15,202 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-21-Concurrent-Programming-Parallelism.pdf
+2025-08-07 13:08:15,763 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-21-Concurrent-Programming-Parallelism.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:15,763 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-22-Concurrent-Programming-Algorithm-Design.pdf
+2025-08-07 13:08:15,932 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-22-Concurrent-Programming-Algorithm-Design.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:15,932 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-23-Concurrent-Programming-Paradigms.pdf
+2025-08-07 13:08:16,179 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-23-Concurrent-Programming-Paradigms.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:16,179 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-24-Program.pdf
+2025-08-07 13:08:16,298 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-24-Program.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:16,298 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-25-std-threads.pdf
+2025-08-07 13:08:16,562 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-25-std-threads.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:16,562 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-26-std-threads-2.pdf
+2025-08-07 13:08:16,754 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-26-std-threads-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:16,754 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-27-OpenMP-part-1.pdf
+2025-08-07 13:08:17,222 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-27-OpenMP-part-1.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:17,222 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-28-OpenMP-Part-2.pdf
+2025-08-07 13:08:17,516 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-28-OpenMP-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:17,516 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-29-Java-Concurrency.pdf
+2025-08-07 13:08:17,705 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-29-Java-Concurrency.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:17,705 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-30-Java-Concurrency-Part-2.pdf
+2025-08-07 13:08:17,866 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-30-Java-Concurrency-Part-2.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:17,867 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-31-Java-Concurrency-Part-3.pdf
+2025-08-07 13:08:18,026 [WARNING] Failed to process file C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-31-Java-Concurrency-Part-3.pdf: 'SubjectExtractor' object has no attribute 'extract_subject_context'
+2025-08-07 13:08:18,026 [INFO] Storing 0 chunks in ChromaDB and MySQL...
+2025-08-07 13:09:36,042 [INFO] Use pytorch device_name: cpu
+2025-08-07 13:09:36,042 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:09:38,958 [INFO] Use pytorch device_name: cpu
+2025-08-07 13:09:38,958 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:09:41,478 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 13:09:44,072 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 13:09:44,343 [INFO] Collection '159.341' dropped.
+2025-08-07 13:09:44,476 [INFO] Collection '159.341' recreated.
+2025-08-07 13:09:44,841 [INFO] Resetting ChromaDB and MySQL datastore...
+2025-08-07 13:09:44,932 [INFO] Collection '159.341' dropped.
+2025-08-07 13:09:45,066 [INFO] Collection '159.341' recreated.
+2025-08-07 13:09:45,130 [INFO] Chunk metadata table reset.
+2025-08-07 13:09:45,133 [INFO] Starting ingestion for collection: 159.341
+2025-08-07 13:09:45,133 [INFO] Found 33 files matching pattern: \.(pdf|txt|md|docx)$
+2025-08-07 13:09:45,133 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf
+2025-08-07 13:09:54,290 [INFO] Extracted subject: Need concise title.**Exploring Programming Languages, Algorithms, and Concurrency: Foundations, Rationale, and Interconnections**
+2025-08-07 13:09:54,295 [INFO] Extracted keywords: ['17' 'algorithms' 'concurrency' 'language' 'languages' 'problems'
+ 'program' 'programming' 'reasons' 'study']
+2025-08-07 13:12:19,549 [INFO] Generated 20 Need concise title.**Exploring Programming Languages, Algorithms, and Concurrency: Foundations, Rationale, and Interconnections** reference sentences
+2025-08-07 13:12:21,151 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:12:21,265 [INFO] Processed 17 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf
+2025-08-07 13:12:21,265 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 13:12:21,265 [INFO] Filtered down to 17 chunks after semantic filtering
+2025-08-07 13:12:21,265 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-02-Programming-Languages-Part-1.pdf
+2025-08-07 13:12:28,041 [INFO] Extracted subject: Need concise title.**"Programming Languages: Bridging Human Intent with Machine Computation Models"**
+2025-08-07 13:12:28,044 [INFO] Extracted keywords: ['34' 'based' 'language' 'languages' 'machine' 'machines' 'paradigm'
+ 'programming' 'tape' 'turing']
+2025-08-07 13:14:53,295 [INFO] Generated 20 Need concise title.**"Programming Languages: Bridging Human Intent with Machine Computation Models"** reference sentences
+2025-08-07 13:14:55,993 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:14:56,308 [INFO] Processed 34 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-02-Programming-Languages-Part-1.pdf
+2025-08-07 13:14:56,308 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 13:14:56,308 [INFO] Filtered down to 34 chunks after semantic filtering
+2025-08-07 13:14:56,308 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-03-Programming-Languages-Part-2.pdf
+2025-08-07 13:15:05,484 [INFO] Extracted subject: We need concise sentence summarizing main subject. It's about programming language structure, lexical/syntax/semantic layers. So title like "Fundamentals of Programming Language Structure and Lexical Analysis".**Fund
+2025-08-07 13:15:05,488 [INFO] Extracted keywords: ['10' '24' 'analysis' 'end' 'language' 'layer' 'lexical' 'program'
+ 'programming' 'syntax']
+2025-08-07 13:16:07,194 [WARNING] Failed to decode JSON array.
+2025-08-07 13:16:07,195 [WARNING] LLM failed for keyword 'end' in context 'We need concise sentence summarizing main subject. It's about programming language structure, lexical/syntax/semantic layers. So title like "Fundamentals of Programming Language Structure and Lexical Analysis".**Fund': 'NoneType' object is not iterable
+2025-08-07 13:17:24,266 [INFO] Generated 18 We need concise sentence summarizing main subject. It's about programming language structure, lexical/syntax/semantic layers. So title like "Fundamentals of Programming Language Structure and Lexical Analysis".**Fund reference sentences
+2025-08-07 13:17:26,677 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:17:27,136 [INFO] Processed 30 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-03-Programming-Languages-Part-2.pdf
+2025-08-07 13:17:27,136 [INFO] Generated 18 reference sentences from extracted keywords
+2025-08-07 13:17:27,136 [INFO] Filtered down to 30 chunks after semantic filtering
+2025-08-07 13:17:27,136 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-04-Programming-Languages-Part-3.pdf
+2025-08-07 13:17:35,098 [INFO] Extracted keywords: ['31' 'checking' 'code' 'compiler' 'context' 'language' 'layer' 'program'
+ 'semantics' 'type']
+2025-08-07 13:19:47,253 [INFO] Filtered out 1 low-information chunks
+2025-08-07 13:19:47,489 [INFO] Processed 30 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-04-Programming-Languages-Part-3.pdf
+2025-08-07 13:19:47,490 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 13:19:47,490 [INFO] Filtered down to 30 chunks after semantic filtering
+2025-08-07 13:19:47,490 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-05-Programming-Languages-Part-4.pdf
+2025-08-07 13:19:54,861 [INFO] Extracted subject: Need concise title.**Evaluating Programming Languages: Readability, Simplicity, Orthogonality, Types, and Syntax**
+2025-08-07 13:19:54,864 [INFO] Extracted keywords: ['21' 'language' 'languages' 'program' 'programs' 'readability'
+ 'reliability' 'simplicity' 'type' 'writability']
+2025-08-07 13:21:06,704 [WARNING] Failed to decode JSON array.
+2025-08-07 13:21:06,704 [WARNING] LLM failed for keyword 'program' in context 'Need concise title.**Evaluating Programming Languages: Readability, Simplicity, Orthogonality, Types, and Syntax**': 'NoneType' object is not iterable
+2025-08-07 13:22:33,554 [INFO] Generated 18 Need concise title.**Evaluating Programming Languages: Readability, Simplicity, Orthogonality, Types, and Syntax** reference sentences
+2025-08-07 13:22:35,270 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:22:35,460 [INFO] Processed 21 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-05-Programming-Languages-Part-4.pdf
+2025-08-07 13:22:35,461 [INFO] Generated 18 reference sentences from extracted keywords
+2025-08-07 13:22:35,461 [INFO] Filtered down to 21 chunks after semantic filtering
+2025-08-07 13:22:35,461 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-06-Imperative-Programming-Part-1.pdf
+2025-08-07 13:22:42,916 [INFO] Extracted subject: Need concise sentence title.Imperative Programming Paradigm: Data, State, and Control Flow in Modern Languages
+2025-08-07 13:22:42,921 [INFO] Extracted keywords: ['38' 'arrays' 'data' 'imperative' 'languages' 'memory' 'pointers' 'type'
+ 'types' 'value']
+2025-08-07 13:23:12,951 [WARNING] LLM request failed (attempt 1): HTTPConnectionPool(host='192.168.0.128', port=1234): Read timed out. (read timeout=30)
+2025-08-07 13:25:39,671 [INFO] Generated 20 Need concise sentence title.Imperative Programming Paradigm: Data, State, and Control Flow in Modern Languages reference sentences
+2025-08-07 13:25:42,554 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:25:43,084 [INFO] Processed 38 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-06-Imperative-Programming-Part-1.pdf
+2025-08-07 13:25:43,084 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 13:25:43,084 [INFO] Filtered down to 38 chunks after semantic filtering
+2025-08-07 13:25:43,084 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-07-Imperative-Programming-Part-2.pdf
+2025-08-07 13:25:49,576 [INFO] Extracted subject: Need concise title.**Imperative Programming Fundamentals: State, Assignment, and Expression Syntax**
+2025-08-07 13:25:49,580 [INFO] Extracted keywords: ['43' 'ada' 'assignment' 'languages' 'notation' 'operators' 'program'
+ 'state' 'statements' 'value']
+2025-08-07 13:28:07,172 [INFO] Generated 20 Need concise title.**Imperative Programming Fundamentals: State, Assignment, and Expression Syntax** reference sentences
+2025-08-07 13:28:11,011 [INFO] Filtered out 2 low-information chunks
+2025-08-07 13:28:11,455 [INFO] Processed 41 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-07-Imperative-Programming-Part-2.pdf
+2025-08-07 13:28:11,455 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 13:28:11,455 [INFO] Filtered down to 41 chunks after semantic filtering
+2025-08-07 13:28:11,456 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-08-Imperative-Programming-Part-3.pdf
+2025-08-07 13:28:18,374 [INFO] Extracted subject: Need concise title.**Scope, Binding, and Program Composition in Imperative Languages**
+2025-08-07 13:28:18,377 [INFO] Extracted keywords: ['26' 'block' 'declaration' 'languages' 'parameters' 'program' 'routine'
+ 'routines' 'rules' 'scope']
+2025-08-07 13:30:42,838 [INFO] Generated 20 Need concise title.**Scope, Binding, and Program Composition in Imperative Languages** reference sentences
+2025-08-07 13:30:44,948 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:30:45,231 [INFO] Processed 26 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-08-Imperative-Programming-Part-3.pdf
+2025-08-07 13:30:45,231 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 13:30:45,231 [INFO] Filtered down to 26 chunks after semantic filtering
+2025-08-07 13:30:45,231 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-09-Lambda-Calculus-Part-1.pdf
+2025-08-07 13:31:36,692 [WARNING] Failed to decode JSON array.
+2025-08-07 13:33:19,067 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:33:19,529 [INFO] Processed 31 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-09-Lambda-Calculus-Part-1.pdf
+2025-08-07 13:33:19,529 [INFO] Generated 18 reference sentences from extracted keywords
+2025-08-07 13:33:19,529 [INFO] Filtered down to 31 chunks after semantic filtering
+2025-08-07 13:33:19,530 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-10-Lambda-Calculus-Part-2.pdf
+2025-08-07 13:33:25,997 [INFO] Extracted subject: Need concise title.**Lambda Calculus Foundations and Conditional Constructs in Functional Language Design**
+2025-08-07 13:33:56,019 [WARNING] LLM request failed (attempt 1): HTTPConnectionPool(host='192.168.0.128', port=1234): Read timed out. (read timeout=30)
+2025-08-07 13:35:04,318 [WARNING] Failed to decode JSON array.
+2025-08-07 13:35:04,319 [WARNING] LLM failed for keyword 'false' in context 'Need concise title.**Lambda Calculus Foundations and Conditional Constructs in Functional Language Design**': 'NoneType' object is not iterable
+2025-08-07 13:35:47,320 [WARNING] Failed to decode JSON array.
+2025-08-07 13:35:47,320 [WARNING] LLM failed for keyword 'true' in context 'Need concise title.**Lambda Calculus Foundations and Conditional Constructs in Functional Language Design**': 'NoneType' object is not iterable
+2025-08-07 13:36:38,222 [WARNING] Failed to decode JSON array.
+2025-08-07 13:36:38,224 [INFO] Generated 14 Need concise title.**Lambda Calculus Foundations and Conditional Constructs in Functional Language Design** reference sentences
+2025-08-07 13:36:40,181 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:36:40,497 [INFO] Processed 31 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-10-Lambda-Calculus-Part-2.pdf
+2025-08-07 13:36:40,498 [INFO] Generated 14 reference sentences from extracted keywords
+2025-08-07 13:36:40,498 [INFO] Filtered down to 31 chunks after semantic filtering
+2025-08-07 13:36:40,498 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-11-Lambda-Calculus-Part-3.pdf
+2025-08-07 13:36:48,446 [INFO] Extracted subject: Need concise title.Lambda Calculus and Functional Language Design for Arithmetic, Conditionals, and Recursion in Programming Languages, Algorithms & Concurrency.
+2025-08-07 13:36:48,450 [INFO] Extracted keywords: ['30' 'def' 'fac' 'function' 'functional' 'functions' 'haskell' 'language'
+ 'languages' 'lisp']
+2025-08-07 13:37:23,283 [WARNING] Failed to decode JSON array.
+2025-08-07 13:37:23,283 [WARNING] LLM failed for keyword 'def' in context 'Need concise title.Lambda Calculus and Functional Language Design for Arithmetic, Conditionals, and Recursion in Programming Languages, Algorithms & Concurrency.': 'NoneType' object is not iterable
+2025-08-07 13:39:14,456 [INFO] Generated 18 Need concise title.Lambda Calculus and Functional Language Design for Arithmetic, Conditionals, and Recursion in Programming Languages, Algorithms & Concurrency. reference sentences
+2025-08-07 13:39:16,785 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:39:17,072 [INFO] Processed 30 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-11-Lambda-Calculus-Part-3.pdf
+2025-08-07 13:39:17,072 [INFO] Generated 18 reference sentences from extracted keywords
+2025-08-07 13:39:17,072 [INFO] Filtered down to 30 chunks after semantic filtering
+2025-08-07 13:39:17,072 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1 (1).pdf
+2025-08-07 13:39:26,017 [INFO] Extracted keywords: ['37' 'child' 'cpu' 'creation' 'new' 'parent' 'process' 'processes'
+ 'program' 'wait']
+2025-08-07 13:41:56,384 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:41:56,881 [INFO] Processed 37 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1 (1).pdf
+2025-08-07 13:41:56,881 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 13:41:56,881 [INFO] Filtered down to 37 chunks after semantic filtering
+2025-08-07 13:41:56,881 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1.pdf
+2025-08-07 13:42:06,117 [INFO] Extracted subject: We need concise sentence summarizing main subject/theme. It's about processes in operating systems, concurrency. So: "An overview of computer processes as active entities in operating system concurrency, covering their structure, states, and management."<|start|>
+2025-08-07 13:42:06,122 [INFO] Extracted keywords: ['37' 'child' 'cpu' 'creation' 'new' 'parent' 'process' 'processes'
+ 'program' 'wait']
+2025-08-07 13:44:08,971 [INFO] Generated 20 We need concise sentence summarizing main subject/theme. It's about processes in operating systems, concurrency. So: "An overview of computer processes as active entities in operating system concurrency, covering their structure, states, and management."<|start|> reference sentences
+2025-08-07 13:44:11,836 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:44:12,342 [INFO] Processed 37 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-12-Processes-Part-1.pdf
+2025-08-07 13:44:12,342 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 13:44:12,342 [INFO] Filtered down to 37 chunks after semantic filtering
+2025-08-07 13:44:12,342 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2 (1).pdf
+2025-08-07 13:44:20,025 [INFO] Extracted keywords: ['31' 'communication' 'consumer' 'message' 'passing' 'process' 'processes'
+ 'producer' 'send' 'shared']
+2025-08-07 13:46:43,835 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:46:44,151 [INFO] Processed 31 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2 (1).pdf
+2025-08-07 13:46:44,151 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 13:46:44,152 [INFO] Filtered down to 31 chunks after semantic filtering
+2025-08-07 13:46:44,152 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2.pdf
+2025-08-07 13:46:50,685 [INFO] Extracted keywords: ['31' 'communication' 'consumer' 'message' 'passing' 'process' 'processes'
+ 'producer' 'send' 'shared']
+2025-08-07 13:49:17,327 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:49:17,655 [INFO] Processed 31 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-13-Processes-Part-2.pdf
+2025-08-07 13:49:17,655 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 13:49:17,655 [INFO] Filtered down to 31 chunks after semantic filtering
+2025-08-07 13:49:17,655 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-14-Threads.pdf
+2025-08-07 13:49:27,173 [INFO] Extracted keywords: ['32' 'example' 'kernel' 'posix' 'process' 'pthreads' 'thread' 'threads'
+ 'user' 'windows']
+2025-08-07 13:51:43,879 [INFO] Filtered out 0 low-information chunks
+2025-08-07 13:51:44,149 [INFO] Processed 32 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-14-Threads.pdf
+2025-08-07 13:51:44,149 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 13:51:44,149 [INFO] Filtered down to 32 chunks after semantic filtering
+2025-08-07 13:51:44,149 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-15-Synchronisation-I.pdf
+2025-08-07 13:51:53,277 [INFO] Extracted keywords: ['35' 'bridge' 'car' 'counter' 'critical' 'left' 'light' 'problem'
+ 'section' 'solution']
+2025-08-07 18:11:03,882 [INFO] Use pytorch device_name: cpu
+2025-08-07 18:11:03,883 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:11:08,221 [INFO] Use pytorch device_name: cpu
+2025-08-07 18:11:08,221 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:11:10,923 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:11:13,858 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 18:11:14,175 [INFO] Collection '159.341' dropped.
+2025-08-07 18:11:14,353 [INFO] Collection '159.341' recreated.
+2025-08-07 18:11:14,737 [INFO] Resetting ChromaDB and MySQL datastore...
+2025-08-07 18:11:14,830 [INFO] Collection '159.341' dropped.
+2025-08-07 18:11:14,952 [INFO] Collection '159.341' recreated.
+2025-08-07 18:11:15,029 [INFO] Chunk metadata table reset.
+2025-08-07 18:11:15,029 [INFO] Starting test ingestion...
+2025-08-07 18:11:15,029 [INFO] Starting ingestion for collection: 159.341
+2025-08-07 18:11:15,029 [INFO] Found 33 files matching pattern: \.(pdf|txt|md|docx)$
+2025-08-07 18:11:15,030 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf
+2025-08-07 18:11:23,558 [INFO] Extracted subject: Need concise title.**Exploring Programming Languages, Algorithms, and Concurrency: Foundations, Rationale, and Interrelationships**
+2025-08-07 18:11:23,561 [INFO] Extracted keywords: ['17' 'algorithms' 'concurrency' 'language' 'languages' 'problems'
+ 'program' 'programming' 'reasons' 'study']
+2025-08-07 18:13:32,718 [INFO] Use pytorch device_name: cpu
+2025-08-07 18:13:32,719 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:13:35,949 [INFO] Use pytorch device_name: cpu
+2025-08-07 18:13:35,950 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:13:38,630 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:13:41,338 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 18:13:41,604 [INFO] Collection '159.341' dropped.
+2025-08-07 18:13:42,027 [INFO] Collection '159.341' recreated.
+2025-08-07 18:13:42,373 [INFO] Resetting ChromaDB and MySQL datastore...
+2025-08-07 18:13:42,460 [INFO] Collection '159.341' dropped.
+2025-08-07 18:13:42,593 [INFO] Collection '159.341' recreated.
+2025-08-07 18:13:42,661 [INFO] Chunk metadata table reset.
+2025-08-07 18:13:42,661 [INFO] Starting test ingestion...
+2025-08-07 18:13:42,661 [INFO] Starting ingestion for collection: 159.341
+2025-08-07 18:13:42,662 [INFO] Found 33 files matching pattern: \.(pdf|txt|md|docx)$
+2025-08-07 18:13:42,662 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf
+2025-08-07 18:13:49,790 [INFO] Extracted keywords: ['ability', 'abstractions', 'achieve', 'adapt', 'aides', 'algorithm', 'algorithms', 'allows', 'analysis', 'application']
+2025-08-07 18:16:59,771 [INFO] Use pytorch device_name: cpu
+2025-08-07 18:16:59,771 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:17:02,687 [INFO] Use pytorch device_name: cpu
+2025-08-07 18:17:02,687 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:17:05,676 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:17:08,476 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 18:17:08,743 [INFO] Collection '159.341' dropped.
+2025-08-07 18:17:08,877 [INFO] Collection '159.341' recreated.
+2025-08-07 18:17:09,225 [INFO] Resetting ChromaDB and MySQL datastore...
+2025-08-07 18:17:09,320 [INFO] Collection '159.341' dropped.
+2025-08-07 18:17:09,454 [INFO] Collection '159.341' recreated.
+2025-08-07 18:17:09,517 [INFO] Chunk metadata table reset.
+2025-08-07 18:17:09,517 [INFO] Starting test ingestion...
+2025-08-07 18:17:09,517 [INFO] Starting ingestion for collection: 159.341
+2025-08-07 18:17:09,517 [INFO] Found 33 files matching pattern: \.(pdf|txt|md|docx)$
+2025-08-07 18:17:09,517 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf
+2025-08-07 18:17:17,760 [INFO] Extracted subject: Need concise title. Maybe "Exploring Programming Languages, Algorithms, and Concurrency"**Exploring Programming Languages, Algorithms, and Concurrency**
+2025-08-07 18:17:17,763 [INFO] Extracted keywords: ['ability', 'abstractions', 'achieve', 'adapt', 'aides', 'algorithm', 'algorithms', 'allows', 'analysis', 'application']
+2025-08-07 18:19:08,929 [WARNING] Failed to decode JSON array.
+2025-08-07 18:19:08,929 [WARNING] LLM failed for keyword 'allows' in context 'Need concise title. Maybe "Exploring Programming Languages, Algorithms, and Concurrency"**Exploring Programming Languages, Algorithms, and Concurrency**': 'NoneType' object is not iterable
+2025-08-07 18:38:07,001 [INFO] Use pytorch device_name: cpu
+2025-08-07 18:38:07,001 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:38:10,250 [INFO] Use pytorch device_name: cpu
+2025-08-07 18:38:10,250 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:38:13,121 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:38:16,013 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 18:38:16,276 [INFO] Collection '159.341' dropped.
+2025-08-07 18:38:16,410 [INFO] Collection '159.341' recreated.
+2025-08-07 18:38:16,764 [INFO] Resetting ChromaDB and MySQL datastore...
+2025-08-07 18:38:16,893 [INFO] Collection '159.341' dropped.
+2025-08-07 18:38:17,277 [INFO] Collection '159.341' recreated.
+2025-08-07 18:38:17,355 [INFO] Chunk metadata table reset.
+2025-08-07 18:38:17,355 [INFO] Starting test ingestion...
+2025-08-07 18:38:17,355 [INFO] Starting ingestion for collection: 159.341
+2025-08-07 18:38:17,355 [INFO] Found 33 files matching pattern: \.(pdf|txt|md|docx)$
+2025-08-07 18:38:17,355 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf
+2025-08-07 18:38:25,033 [INFO] Extracted subject: Exploring Programming Languages, Algorithms, and Concurrency: Foundations, Rationale, and Interconnections
+2025-08-07 18:38:25,036 [INFO] Extracted keywords: ['ability', 'abstractions', 'achieve', 'adapt', 'aides', 'algorithm', 'algorithms', 'allows', 'analysis', 'application']
+2025-08-07 18:40:37,314 [INFO] Generated 20 Exploring Programming Languages, Algorithms, and Concurrency: Foundations, Rationale, and Interconnections reference sentences
+2025-08-07 18:40:38,827 [INFO] Filtered out 0 low-information chunks
+2025-08-07 18:40:38,948 [INFO] Processed 17 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf
+2025-08-07 18:40:38,948 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 18:40:38,948 [INFO] Filtered down to 17 chunks after semantic filtering
+2025-08-07 18:40:38,948 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-02-Programming-Languages-Part-1.pdf
+2025-08-07 18:40:45,607 [INFO] Extracted subject: Foundations of Programming Languages: Bridging Human Intent with Computational Models
+2025-08-07 18:40:45,610 [INFO] Extracted keywords: ['abstract', 'abstraction', 'abstractions', 'abused', 'accepted', 'access', 'acompiler', 'action', 'actions', 'actual']
+2025-08-07 18:42:50,535 [INFO] Generated 20 “Foundations of Programming Languages: Bridging Human Intent with Computational Models” reference sentences
+2025-08-07 18:42:53,462 [INFO] Filtered out 3 low-information chunks
+2025-08-07 18:42:53,690 [INFO] Processed 31 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-02-Programming-Languages-Part-1.pdf
+2025-08-07 18:42:53,690 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 18:42:53,690 [INFO] Filtered down to 31 chunks after semantic filtering
+2025-08-07 18:42:53,690 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-03-Programming-Languages-Part-2.pdf
+2025-08-07 18:43:02,578 [INFO] Extracted subject: We need concise statement summarizing main subject/theme. It's about programming language structure, lexical analysis, layers etc. So title could be "Structure and Lexical Analysis of Programming Languages".**The Structure
+2025-08-07 18:43:02,582 [INFO] Extracted keywords: ['abc', 'accepts', 'accomplish', 'actually', 'addresses', 'alexical', 'algorithms', 'allowable', 'allowed', 'alternation']
+2025-08-07 18:45:20,024 [INFO] Generated 20 We need concise statement summarizing main subject/theme. It's about programming language structure, lexical analysis, layers etc. So title could be "Structure and Lexical Analysis of Programming Languages".**“The Structure reference sentences
+2025-08-07 18:45:22,755 [INFO] Filtered out 0 low-information chunks
+2025-08-07 18:45:23,268 [INFO] Processed 30 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-03-Programming-Languages-Part-2.pdf
+2025-08-07 18:45:23,268 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 18:45:23,269 [INFO] Filtered down to 30 chunks after semantic filtering
+2025-08-07 18:45:23,269 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-04-Programming-Languages-Part-3.pdf
+2025-08-07 18:45:31,739 [INFO] Extracted subject: We need one concise sentence summarizing main subject/theme. It's about programming language layers: lexical, syntax, contextual, semantic. So title could be "Four-Layer Structure of Programming Languages: Lexical, Syntax, Contextual,
+2025-08-07 18:45:31,742 [INFO] Extracted keywords: ['able', 'actions', 'actually', 'addresses', 'advantage', 'agree', 'algorithms', 'allow', 'allowable', 'allowed']
+2025-08-07 18:48:40,087 [INFO] Generated 21 We need one concise sentence summarizing main subject/theme. It's about programming language layers: lexical, syntax, contextual, semantic. So title could be "Four-Layer Structure of Programming Languages: Lexical, Syntax, Contextual, reference sentences
+2025-08-07 18:48:42,833 [INFO] Filtered out 2 low-information chunks
+2025-08-07 18:48:43,047 [INFO] Processed 29 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-04-Programming-Languages-Part-3.pdf
+2025-08-07 18:48:43,047 [INFO] Generated 21 reference sentences from extracted keywords
+2025-08-07 18:48:43,047 [INFO] Filtered down to 29 chunks after semantic filtering
+2025-08-07 18:48:43,047 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-05-Programming-Languages-Part-4.pdf
+2025-08-07 18:48:51,845 [INFO] Extracted subject: We need one concise sentence summarizing main subject/theme. It's about evaluating programming languages, focusing on readability criteria like simplicity, orthogonality, types, syntax. So title could be "Evaluating Programming Languages: Readability and Design
+2025-08-07 18:48:51,848 [INFO] Extracted keywords: ['ability', 'absent', 'abstraction', 'accessing', 'accidental', 'accomplish', 'ada', 'address', 'algorithms', 'aliasing']
+2025-08-07 18:51:12,274 [WARNING] LLM request failed (attempt 1): HTTPConnectionPool(host='192.168.0.128', port=1234): Read timed out. (read timeout=30)
+2025-08-07 18:51:32,534 [INFO] Generated 21 We need one concise sentence summarizing main subject/theme. It's about evaluating programming languages, focusing on readability criteria like simplicity, orthogonality, types, syntax. So title could be "Evaluating Programming Languages: Readability and Design reference sentences
+2025-08-07 18:51:34,027 [INFO] Filtered out 0 low-information chunks
+2025-08-07 18:51:34,212 [INFO] Processed 21 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-05-Programming-Languages-Part-4.pdf
+2025-08-07 18:51:34,212 [INFO] Generated 21 reference sentences from extracted keywords
+2025-08-07 18:51:34,213 [INFO] Filtered down to 21 chunks after semantic filtering
+2025-08-07 18:51:34,213 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-06-Imperative-Programming-Part-1.pdf
+2025-08-07 18:51:40,888 [INFO] Extracted subject: Need concise title.Imperative Programming Paradigm: Foundations, Data Handling, and Concurrency Challenges
+2025-08-07 18:51:40,891 [INFO] Extracted keywords: ['abc', 'able', 'abstracting', 'access', 'accessed', 'accessing', 'accidental', 'actions', 'ada', 'add']
+2025-08-07 18:53:42,912 [INFO] Generated 20 Need concise title.Imperative Programming Paradigm: Foundations, Data Handling, and Concurrency Challenges reference sentences
+2025-08-07 18:53:45,574 [INFO] Filtered out 2 low-information chunks
+2025-08-07 18:53:46,088 [INFO] Processed 36 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-06-Imperative-Programming-Part-1.pdf
+2025-08-07 18:53:46,089 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 18:53:46,089 [INFO] Filtered down to 36 chunks after semantic filtering
+2025-08-07 18:53:46,089 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-07-Imperative-Programming-Part-2.pdf
+2025-08-07 18:53:52,929 [INFO] Extracted subject: Need concise sentence title.Imperative Programming Fundamentals: State, Assignment, and Expression Syntax in Modern Languages
+2025-08-07 18:53:52,933 [INFO] Extracted keywords: ['able', 'accept', 'access', 'according', 'action', 'actions', 'actually', 'ada', 'addition', 'additional']
+2025-08-07 18:54:07,853 [WARNING] Failed to decode JSON array.
+2025-08-07 18:54:07,853 [WARNING] LLM failed for keyword 'able' in context 'Need concise sentence title.Imperative Programming Fundamentals: State, Assignment, and Expression Syntax in Modern Languages': 'NoneType' object is not iterable
+2025-08-07 18:55:46,086 [WARNING] Failed to decode JSON array.
+2025-08-07 18:55:46,086 [WARNING] LLM failed for keyword 'actually' in context 'Need concise sentence title.Imperative Programming Fundamentals: State, Assignment, and Expression Syntax in Modern Languages': 'NoneType' object is not iterable
+2025-08-07 18:56:44,528 [INFO] Use pytorch device_name: cpu
+2025-08-07 18:56:44,528 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:56:47,582 [INFO] Use pytorch device_name: cpu
+2025-08-07 18:56:47,582 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:56:50,161 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-07 18:56:52,719 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 18:56:53,002 [INFO] Collection '159.341' dropped.
+2025-08-07 18:56:53,135 [INFO] Collection '159.341' recreated.
+2025-08-07 18:56:53,497 [INFO] Resetting ChromaDB and MySQL datastore...
+2025-08-07 18:56:53,590 [INFO] Collection '159.341' dropped.
+2025-08-07 18:56:53,725 [INFO] Collection '159.341' recreated.
+2025-08-07 18:56:53,787 [INFO] Chunk metadata table reset.
+2025-08-07 18:56:53,787 [INFO] Starting test ingestion...
+2025-08-07 18:56:53,787 [INFO] Starting ingestion for collection: 159.341
+2025-08-07 18:56:53,787 [INFO] Found 33 files matching pattern: \.(pdf|txt|md|docx)$
+2025-08-07 18:56:53,787 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf
+2025-08-07 18:57:00,638 [INFO] Extracted subject: Exploring Programming Languages, Algorithms, and Concurrency: Foundations, Rationale, and Interrelationships
+2025-08-07 18:57:00,641 [INFO] Extracted keywords: ['ability', 'abstractions', 'achieve', 'adapt', 'aides', 'algorithm', 'algorithms', 'allows', 'analysis', 'application']
+2025-08-07 18:59:03,571 [INFO] Generated 20 Exploring Programming Languages, Algorithms, and Concurrency: Foundations, Rationale, and Interrelationships reference sentences
+2025-08-07 18:59:04,901 [INFO] Filtered out 0 low-information chunks
+2025-08-07 18:59:05,021 [INFO] Processed 17 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-01-Course-Introduction.pdf
+2025-08-07 18:59:05,021 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-07 18:59:05,021 [INFO] Filtered down to 17 chunks after semantic filtering
+2025-08-07 18:59:05,021 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-02-Programming-Languages-Part-1.pdf
+2025-08-07 18:59:11,386 [INFO] Extracted subject: Programming languages as bridges between human problem domains and machine computation models
+2025-08-07 18:59:11,391 [INFO] Extracted keywords: ['abstract', 'abstraction', 'abstractions', 'abused', 'accepted', 'access', 'acompiler', 'action', 'actions', 'actual']

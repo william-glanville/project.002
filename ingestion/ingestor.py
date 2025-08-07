@@ -12,8 +12,7 @@ from sentence_transformers import SentenceTransformer
 from PyPDF2 import PdfReader
 from docx import Document
 from semantic_filter import SemanticFilter
-from reference_builder import ReferenceBuilder
-
+from reference_builder import ReferenceBuilder, SubjectExtractor, LocalLLMClient, ReferenceCache
 
 logging.basicConfig(
     level=logging.INFO,
@@ -141,7 +140,10 @@ class Ingestor:
     def __init__(self, config: IngestorConfig):
         self.config = config
         self.filter = SemanticFilter(logger=logging, model_name=config.embedder_model_name, threshold=0.3)
-        self.reference_builder = ReferenceBuilder()
+        self.llm = LocalLLMClient()
+        self.cache = ReferenceCache( persistent=False, path=constants.get_data_file("reference.cache"))
+        self.reference_builder = ReferenceBuilder( llm_client=self.llm, cache=self.cache )
+        self.subject_extractor = SubjectExtractor( llm_client=self.llm )
         self.crawler = FileCrawler(config.collection_path, config.file_filter_pattern)
         self.parser_factory = FileParserFactory()
         self.embedder = ChunkEmbedder(
@@ -155,12 +157,12 @@ class Ingestor:
             password=config.mysql_password,
             host=config.mysql_host,
             port=config.mysql_port,
-            schema=config.mysql_schema
+            database=config.mysql_schema
         )
 
         if config.reset_datastore:
             logger.info("Resetting ChromaDB and MySQL datastore...")
-            self.chromadb.reset()
+            self.chromadb.reset_collection(collection_name=config.collection_name)
             self.mysql.reset()
 
     def ingest(self):
@@ -175,8 +177,9 @@ class Ingestor:
                 logger.info(f"Parsing file: {path}")
                 raw_chunks = self.parser_factory.extract_chunks(path)
                 chunked = self.embedder.chunk_text(raw_chunks)
+                subject_context = self.subject_extractor.extract_subject(chunked)
                 # Build reference set from chunked data
-                reference_texts = self.reference_builder.build_reference_set(chunked)
+                reference_texts = self.reference_builder.build_reference_set(chunks=chunked, context=subject_context)
                 filtered = self.filter.filter_chunks(chunked, reference_texts)
                 embedded = self.embedder.generate_embeddings(filtered)
                 all_chunks.extend(embedded)
@@ -188,8 +191,8 @@ class Ingestor:
                 continue
 
         logger.info(f"Storing {len(all_chunks)} chunks in ChromaDB and MySQL...")
-        self.chromadb.store_chunks(all_chunks)
-        self.mysql.store_metadata(all_chunks)
+        self.chromadb.insert_chunks(all_chunks)
+        self.mysql.insert_chunk_metadata(all_chunks)
         logger.info("Ingestion complete.")
 
 
@@ -286,7 +289,7 @@ class ChromaDBHandler(VectorDBHandler):
         self.collection_name = collection_name
         self.client = chromadb.PersistentClient(path=location)
         self.collection = None
-        self.reset_collection(collection_name=collection_name, embed_fn=self.embed_fn)
+        self.reset_collection(collection_name=collection_name)
 
     def insert_chunks(self, chunks):
         try:
@@ -304,7 +307,7 @@ class ChromaDBHandler(VectorDBHandler):
             )
             self.insert_chunks(chunks)
 
-    def reset_collection(self, collection_name="rag_chunks",embed_fn=None):
+    def reset_collection(self, collection_name="rag_chunks"):
         try:
             self.client.delete_collection(collection_name)
             logger.info(f"Collection '{collection_name}' dropped.")
@@ -314,7 +317,7 @@ class ChromaDBHandler(VectorDBHandler):
         # Optional: reinitialize for insert readiness
         self.collection = self.client.create_collection(
             name=collection_name,
-            embedding_function=embed_fn
+            embedding_function=self.embed_fn
         )
         logger.info(f"Collection '{collection_name}' recreated.")
 
@@ -363,7 +366,7 @@ class MySQLDBHandler:
 
         self.conn.commit()
 
-    def reset_chunk_metadata_table(self):
+    def reset(self):
         drop_questions_query = "DROP TABLE IF EXISTS mcq_questions;"
         drop_metadata_query = "DROP TABLE IF EXISTS mcq_metadata;"
 
