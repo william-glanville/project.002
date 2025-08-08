@@ -5,7 +5,7 @@ import chromadb
 import mysql.connector
 import constants
 import logging
-
+import traceback
 from abc import ABC, abstractmethod
 from chromadb.utils import embedding_functions
 from sentence_transformers import SentenceTransformer
@@ -188,6 +188,7 @@ class Ingestor:
                 logger.info(f"Filtered down to {len(filtered)} chunks after semantic filtering")
             except Exception as e:
                 logger.warning(f"Failed to process file {path}: {str(e)}")
+                traceback.print_exc()
                 continue
 
         logger.info(f"Storing {len(all_chunks)} chunks in ChromaDB and MySQL...")

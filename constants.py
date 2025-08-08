@@ -28,3 +28,19 @@ MODEL_CHUNK_TAGGER_NAME = "facebook/bart-large-mnli"
 
 def safe_text(text):
     return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
+
+# Optional: whitelist of conceptual nouns to retain even if ambiguous
+CONCEPT_WHITELIST = {
+    "embedding", "pipeline", "workflow", "classifier", "metadata", "intent", "entity",
+    "vector", "cache", "corpus", "token", "paraphrase", "hyperparameter", "model", "c", "C#", "cpp","c++","asm"
+}
+
+# Optional: blacklist of generic nouns to exclude
+CONCEPT_BLACKLIST = {
+    "file", "line", "project", "info", "data", "error", "use", "load", "main", "call", "stack"
+}
+
+CUSTOM_STOPWORDS = {
+    "way", "there", "they", "them", "those", "thing", "stuff", "something", "anything",
+    "everything", "nothing", "etc", "use", "used", "using", "get", "got", "make", "made"
+}

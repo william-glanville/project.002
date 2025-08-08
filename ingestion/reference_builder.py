@@ -5,10 +5,13 @@ import time
 import json
 import hashlib
 import shelve
-
-from sklearn.feature_extraction.text import TfidfVectorizer
-
 import constants
+import spacy
+import ftfy
+from collections import defaultdict
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+
+nlp = spacy.load("en_core_web_sm")
 
 logger = logging.getLogger(__name__)
 
@@ -78,6 +81,7 @@ class LocalLLMClient:
         raise RuntimeError("Failed to get response from LMStudio after retries")
 
 
+
 class SubjectExtractor:
     def __init__(self, llm_client, max_chunks=10):
         self.llm = llm_client
@@ -88,13 +92,15 @@ class SubjectExtractor:
         combined = "\n".join(sample_texts)
 
         prompt = (
-            "Based on the following document excerpts, summarize the main subject or theme in one concise statement. Delimit the suggested subject with **.\n\n"
+            "Based on the following document excerpts, summarize the main subject or theme in one concise statement. Prefix the final title/subject with 'TITLE_IS_:'\n\n"
             f"{combined}\n\nSubject:"
         )
 
         try:
             subject = self.llm.generate(prompt, SUMMARY_PROMPT, max_tokens=50)
-            match = re.search(r"\*\*(.*?)\*\*", subject)
+            logger.info(f"Proposed subject response: {constants.safe_text(subject)}")
+            #match = re.search(r"\*\*(.*?)\*\*", subject)
+            match = re.search(r"TITLE_IS_:\s*(.+)", subject)
             result = match.group(1) if match else subject
             logger.info(f"Extracted subject: {constants.safe_text(result)}")
             return result
@@ -103,34 +109,43 @@ class SubjectExtractor:
             return "General Document"
 
 class ReferenceBuilder:
-    def __init__(self, llm_client, max_keywords=10, sentences_per_keyword=2, cache=None):
+    def __init__(self, llm_client, max_keywords=10, sentences_per_keyword=2, cache=None, stopwords=None):
         self.max_keywords = max_keywords
         self.sentences_per_keyword = sentences_per_keyword
         self.llm = llm_client
         self.parser = OutputParser(mode="json")
         self.cache = cache or ReferenceCache()
+        self.stopwords = set(stopwords or [])
 
     def _hash_chunks(self, chunks):
         serialized = json.dumps(chunks, sort_keys=True)
         return hashlib.md5(serialized.encode()).hexdigest()
 
-    def clean_tokens(self, tokens):
-        return [
-            token for token in tokens
-            if token.isalpha() and len(token) > 3  # remove numbers and short non-descriptive words
-        ]
+    def _extract_concepts(self, text):
+        candidate = text.decode("utf-8", errors="ignore") if isinstance(text, bytes) else text
+        doc = nlp(candidate)
+        concepts = ConceptSet()
+        for token in doc:
+            if token.pos_ in {"NOUN", "PROPN"}:
+                word = token.text.lower()
+                if (( word in constants.CONCEPT_WHITELIST or
+                    (word not in constants.CONCEPT_BLACKLIST and len(word) > 3) or
+                    (not any(char.isdigit() for char in word)) or
+                    ((word not in self.stopwords) and (word not in ENGLISH_STOP_WORDS))) and
+                    self._is_grammatical(word)
+                ):
+                    concepts.add(word)
+        return concepts.get_all()
 
-    def extract_keywords_tfidf(self, texts):
-        vectorizer = TfidfVectorizer(stop_words='english', max_features=1000)
-        X = vectorizer.fit_transform(texts)
-        keywords = vectorizer.get_feature_names_out()
-        keywords = self.clean_tokens(keywords)
-
-        return keywords[:self.max_keywords]
+    def _is_grammatical(self, word):
+        return re.fullmatch(r"[a-zA-Z\-]{2,}", word) is not None
 
     def extract_keywords(self, chunks):
+        keywords = set([])
         texts = [chunk["text"] for chunk in chunks if chunk["text"].strip()]
-        keywords = self.extract_keywords_tfidf(texts)
+        for text in texts:
+            keywords.update(self._extract_concepts(text))
+        keywords = list(keywords)[:self.max_keywords]
         logger.info(f"Extracted keywords: {keywords}")
         return keywords
 
@@ -214,8 +229,62 @@ class OutputParser:
         """
         return re.sub(r"\s+", " ", s).strip()
 
+class ConceptSet:
+    def __init__(self):
+        self._unique = set()
+        self._freq = defaultdict(int)
+
+    def add(self, word):
+        word = self.__normalize_text__(word).lower()
+        if word:
+            self._unique.add(word)
+            self._freq[word] += 1
+
+    def update(self, words):
+        for word in words:
+            self.add(word)
+
+    def __normalize_text__(self,text):
+        text = ftfy.fix_text(text)  # Fix broken Unicode
+        text = text.replace("•", "")  # Remove bullet
+        return text.strip()
+
+    def __contains__(self, word):
+        return word.lower() in self._unique
+
+    def __len__(self):
+        return len(self._unique)
+
+    def get_all(self):
+        return sorted(self._unique)
+
+    def get_ranked(self, top_n=None, method="combined"):
+        def score(word):
+            if method == "length":
+                return len(word)
+            elif method == "frequency":
+                return self._freq[word]
+            elif method == "combined":
+                return len(word) * self._freq[word]
+            else:
+                raise ValueError(f"Unknown method: {method}")
+
+        ranked = sorted(self._unique, key=score, reverse=True)
+        return ranked[:top_n] if top_n else ranked
+
+    def get_frequency(self, word):
+        return self._freq.get(word.lower(), 0)
+
+    def summary(self):
+        return {word: self._freq[word] for word in sorted(self._unique)}
+
+    def __repr__(self):
+        return f"<ConceptSet size={len(self._unique)}>"
+
+
 def main():
-    builder = ReferenceBuilder(sentences_per_keyword=3)
+    llm = LocalLLMClient()
+    builder = ReferenceBuilder(llm_client=llm, sentences_per_keyword=3)
     keywords = ["Parallelism", "Divide‑and‑Conquer", "Big O Complexity", "Randomized Algorithms", "Dynamic Programming", "Greedy Strategies", "Approximation Ratios", "NP‑Hardness", "Heuristic Search", "Graph Traversal"]
     context = "Computing Algorithmics"
     references = builder.generate_reference_sentences(keywords, context)
