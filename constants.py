@@ -16,6 +16,12 @@ FILE_TYPE_PDF = r"\.(pdf)$"
 FILE_TYPE_DOCX = r"\.(docx)$"
 FILE_TYPE_PPTX = r"\.(pptx)$"
 
+MYSQL_USER = "mcquser",
+MYSQL_PASSWORD = "mcquser",
+MYSQL_HOST = "localhost",
+MYSQL_PORT = 3306,
+MYSQL_SCHEMA = "mcq",
+
 def get_log_file(name):
     return DIR_LOGGS / f"{name}.log"
 
