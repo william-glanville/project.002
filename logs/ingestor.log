@@ -829,3 +829,46 @@
 2025-08-08 15:48:50,410 [INFO] Proposed subject response: Need concise title. Probably "OpenMP for Shared-Memory Parallel Programming".TITLE_IS_: OpenMP for SharedMemory Parallel Programming and Thread Management
 2025-08-08 15:48:50,410 [INFO] Extracted subject: OpenMP for SharedMemory Parallel Programming and Thread Management
 2025-08-08 15:48:50,838 [INFO] Extracted keywords: ['tid', 'clauses', 'pieces', 'output', 'copy', 'iostream', 'parameter', 'directives', 'do', 'char']
+2025-08-08 15:51:35,937 [INFO] Filtered out 0 low-information chunks
+2025-08-08 15:51:36,518 [INFO] Processed 33 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-27-OpenMP-part-1.pdf
+2025-08-08 15:51:36,518 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-08 15:51:36,518 [INFO] Filtered down to 33 chunks after semantic filtering
+2025-08-08 15:51:36,518 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-28-OpenMP-Part-2.pdf
+2025-08-08 15:51:43,697 [INFO] Proposed subject response: Need title. Probably "OpenMP Parallel Programming Constructs and Synchronization".TITLE_IS_: OpenMP Parallel Programming Constructs and Synchronization Techniques
+2025-08-08 15:51:43,697 [INFO] Extracted subject: OpenMP Parallel Programming Constructs and Synchronization Techniques
+2025-08-08 15:51:44,270 [INFO] Extracted keywords: ['tid', 'nesting', 'pieces', 'output', 'seconds', 'directives', 'barrier', 'char', 'compiler', 'results']
+2025-08-08 15:54:07,010 [INFO] Generated 20 OpenMP Parallel Programming Constructs and Synchronization Techniques reference sentences
+2025-08-08 15:54:11,748 [INFO] Filtered out 0 low-information chunks
+2025-08-08 15:54:12,444 [INFO] Processed 39 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-28-OpenMP-Part-2.pdf
+2025-08-08 15:54:12,444 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-08 15:54:12,444 [INFO] Filtered down to 39 chunks after semantic filtering
+2025-08-08 15:54:12,444 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-29-Java-Concurrency.pdf
+2025-08-08 15:54:21,142 [INFO] Proposed subject response: Need concise title.TITLE_IS_: Java Concurrency Fundamentals: Threads, Runnable, Interrupts, Join, and Synchronization in the JVM
+2025-08-08 15:54:21,142 [INFO] Extracted subject: Java Concurrency Fundamentals: Threads, Runnable, Interrupts, Join, and Synchronization in the JVM
+2025-08-08 15:54:21,579 [INFO] Extracted keywords: ['interrupt', 'interruptedexception', 'respect', 'mcondition', 'seconds', 'inheritance', 'mcount', 'mlock', 'care', 'period']
+2025-08-08 15:56:55,421 [INFO] Generated 20 Java Concurrency Fundamentals: Threads, Runnable, Interrupts, Join, and Synchronization in the JVM reference sentences
+2025-08-08 15:56:58,531 [INFO] Filtered out 0 low-information chunks
+2025-08-08 15:56:58,981 [INFO] Processed 27 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-29-Java-Concurrency.pdf
+2025-08-08 15:56:58,981 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-08 15:56:58,981 [INFO] Filtered down to 27 chunks after semantic filtering
+2025-08-08 15:56:58,981 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-30-Java-Concurrency-Part-2.pdf
+2025-08-08 15:57:05,146 [INFO] Proposed subject response: Need concise title.TITLE_IS_: Java Concurrency and ThreadPoolExecutor Design Overview
+2025-08-08 15:57:05,146 [INFO] Extracted subject: Java Concurrency and ThreadPoolExecutor Design Overview
+2025-08-08 15:57:05,472 [INFO] Extracted keywords: ['mid', 'threadfactory', 'interruptedexception', 'seconds', 'submitter', 'workqueue', 'execute', 'linkedblockingqueue', 'executor', 'results']
+2025-08-08 15:59:24,929 [INFO] Generated 20 Java Concurrency and ThreadPoolExecutor Design Overview reference sentences
+2025-08-08 15:59:27,410 [INFO] Filtered out 1 low-information chunks
+2025-08-08 15:59:27,849 [INFO] Processed 24 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-30-Java-Concurrency-Part-2.pdf
+2025-08-08 15:59:27,849 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-08 15:59:27,849 [INFO] Filtered down to 24 chunks after semantic filtering
+2025-08-08 15:59:27,849 [INFO] Parsing file: C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-31-Java-Concurrency-Part-3.pdf
+2025-08-08 15:59:34,260 [INFO] Proposed subject response: Need title.TITLE_IS_: Introduction to Java Streams and Their Functional Pipeline Operations
+2025-08-08 15:59:34,260 [INFO] Extracted subject: Introduction to Java Streams and Their Functional Pipeline Operations
+2025-08-08 15:59:34,643 [INFO] Extracted keywords: ['lifetime', 'output', 'copy', 'elements', 'care', 'compiler', 'results', 'integers', 'understanding', 'operations']
+2025-08-08 16:02:06,238 [INFO] Generated 20 Introduction to Java Streams and Their Functional Pipeline Operations reference sentences
+2025-08-08 16:02:09,412 [INFO] Filtered out 0 low-information chunks
+2025-08-08 16:02:09,704 [INFO] Processed 27 chunks from C:\storage\development\dev.securiloc.nz\project.002\data\raw.01\Lecture-31-Java-Concurrency-Part-3.pdf
+2025-08-08 16:02:09,704 [INFO] Generated 20 reference sentences from extracted keywords
+2025-08-08 16:02:09,704 [INFO] Filtered down to 27 chunks after semantic filtering
+2025-08-08 16:02:09,704 [INFO] Storing 1015 chunks in ChromaDB and MySQL...
+2025-08-08 16:02:23,276 [INFO] Ingestion complete.
+2025-08-08 16:02:23,281 [INFO] Ingestion complete.

@@ -36,7 +36,7 @@ def main():
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump({
             "collection_name": COLLECTION_NAME,
-            "source_path": SUBJECT_01_FOLDER,
+            "source_path": str(SUBJECT_01_FOLDER),
             "reset": RESET_DATASTORE
         }, f, indent=2)
 

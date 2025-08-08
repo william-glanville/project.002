@@ -1,11 +1,11 @@
 import constants
-from chromadb import Client
+from chromadb import PersistentClient
 from sentence_transformers import SentenceTransformer
 
 
 class RetrievalTester:
     def __init__(self, collection_name="Unknown", model_name=constants.MODEL_EMBED_NAME):
-        self.client = Client()
+        self.client = PersistentClient(path=constants.DATA_CHROMA_DB_DIR)
         self.collection = self.client.get_collection(collection_name)
         self.model = SentenceTransformer(model_name)
 
@@ -23,3 +23,12 @@ class RetrievalTester:
             docs = self.query(q)
             for i, doc in enumerate(docs):
                 print(f"{i+1}. {doc[:100]}...")
+
+
+def main():
+    tester = RetrievalTester( collection_name="159.341")
+    tester.test_queries(["What are processes", "what are the benefits of multithreading"])
+    print("Done!")
+
+if __name__ == "__main__":
+    main()
