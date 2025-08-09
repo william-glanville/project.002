@@ -1,6 +1,6 @@
 from semantic_filter import SemanticFilter
 from chunk_tagger import ChunkTagger
-from test_retrieval import RetrievalTester
+from query_retrieval import RetrievalQuery
 
 
 def main():
@@ -17,7 +17,7 @@ def main():
     tagged_chunks = tagger.tag_chunks(filtered_chunks)
 
     # Step 3: Test retrieval
-    tester = RetrievalTester()
+    tester = RetrievalQuery()
     tester.test_queries(["What is Bayes theorem?", "Explain gradient descent"])
 
 
