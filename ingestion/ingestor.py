@@ -163,7 +163,7 @@ class Ingestor:
         if config.reset_datastore:
             logger.info("Resetting ChromaDB and MySQL datastore...")
             self.chromadb.reset_collection(collection_name=config.collection_name)
-            self.mysql.reset()
+            self.mysql.reset(collection_name=config.collection_name)
 
     def ingest(self):
         logger.info(f"Starting ingestion for collection: {self.config.collection_name}")
@@ -283,6 +283,10 @@ class VectorDBHandler(ABC):
         pass
 
 
+def chunk_batches(data, batch_size):
+    for i in range(0, len(data), batch_size):
+        yield data[i:i + batch_size]
+
 
 class ChromaDBHandler(VectorDBHandler):
     def __init__(self, location=constants.DATA_CHROMA_DB_DIR, collection_name="rag_chunks"):
@@ -292,13 +296,21 @@ class ChromaDBHandler(VectorDBHandler):
         self.collection = None
         self.reset_collection(collection_name=collection_name)
 
-    def insert_chunks(self, chunks):
+    def insert_chunks(self, chunks, batch_size=5000):
+        if not chunks:
+            logging.warning("No chunks to insert — skipping.")
+            return
         try:
-            self.collection.add(
-                documents=[chunk["text"] for chunk in chunks],
-                ids=[chunk["id"] for chunk in chunks],
-                metadatas=[chunk["metadata"] for chunk in chunks]
-            )
+            for batch in chunk_batches(chunks, batch_size):
+                ids = [c["id"] for c in batch]
+                documents = [c["text"] for c in batch]
+                metadatas = [c["metadata"] for c in batch]
+                self.collection.add(
+                    ids=ids,
+                    documents=documents,
+                    metadatas=metadatas
+                )
+                logging.info(f"Inserted batch of {len(batch)} chunks.")
         except chromadb.errors.NotFoundError:
             # Recreate and retry
             logger.info(f"Collection '{self.collection_name}' not found. Reinitializing...")
@@ -367,13 +379,14 @@ class MySQLDBHandler:
 
         self.conn.commit()
 
-    def reset(self):
+    def recreate(self):
         drop_questions_query = "DROP TABLE IF EXISTS mcq_questions;"
         drop_metadata_query = "DROP TABLE IF EXISTS mcq_metadata;"
 
         create_questions_table = """
             CREATE TABLE mcq_questions (    
                 question_id VARCHAR(255) PRIMARY KEY,
+                collection_name VARCHAR(255),
                 chunk_id VARCHAR(255),
                 stem TEXT,
                 options JSON,
@@ -399,6 +412,16 @@ class MySQLDBHandler:
 
         self.cursor.execute(create_metadata_table)
         self.cursor.execute(create_questions_table)
+
+        self.conn.commit()
+        logger.info("Chunk metadata table recreated.")
+
+    def reset(self, collection_name):
+        clear_metadata_query = f"DELETE FROM mcq_metadata WHERE collection_name = '{collection_name}';"
+        clear_questions_query = f"DELETE FROM mcq_questions WHERE collection_name = '{collection_name}';"
+
+        self.cursor.execute(clear_metadata_query)
+        self.cursor.execute(clear_questions_query)
 
         self.conn.commit()
         logger.info("Chunk metadata table reset.")

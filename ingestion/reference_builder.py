@@ -8,6 +8,7 @@ import shelve
 import constants
 import spacy
 import ftfy
+import wordninja
 from collections import defaultdict
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 
@@ -121,8 +122,32 @@ class ReferenceBuilder:
         serialized = json.dumps(chunks, sort_keys=True)
         return hashlib.md5(serialized.encode()).hexdigest()
 
+    def _split_text_with_wordninja(self, text_block):
+        """
+        Splits a block of text into individual words using wordninja.
+        Handles compound words and removes excessive whitespace.
+
+        Args:
+            text_block (str): The input string to process.
+
+        Returns:
+            str: A space-separated string of segmented words.
+        """
+        # Normalize whitespace and split into tokens
+        tokens = text_block.strip().split()
+
+        # Apply wordninja to each token
+        segmented = []
+        for token in tokens:
+            words = wordninja.split(token)
+            segmented.append(" ".join(words))
+
+        # Join all segmented tokens into a single string
+        return " ".join(segmented)
+
     def _extract_concepts(self, text):
         candidate = text.decode("utf-8", errors="ignore") if isinstance(text, bytes) else text
+        candidate = self._split_text_with_wordninja(candidate)
         doc = nlp(candidate)
         concepts = ConceptSet()
         for token in doc:
@@ -172,7 +197,7 @@ class ReferenceBuilder:
         keywords = self.extract_keywords(chunks)
         references = self.generate_reference_sentences(keywords, context)
         self.cache.set(chunks, references)
-        logger.info(f"Generated {len(references)} {context} reference sentences")
+        logger.info(f"Generated {len(references)} {constants.safe_text(context)} reference sentences")
         return references
 
 

@@ -10,7 +10,16 @@ DIR_RETRIEVAL = ROOT / "retrieval"
 DIR_RETRIEVAL_TEMPLATES = DIR_RETRIEVAL / "templates"
 DIR_RETRIEVAL_STATIC = DIR_RETRIEVAL / "static"
 
-DATA_RAW01_DIR = DIR_DATA / "159.341/"
+DATA_RAW01_DIR = DIR_RETRIEVAL_STATIC / "159.341/"
+DATA_RAW02_DIR = DIR_RETRIEVAL_STATIC / "158.337/"
+DATA_RAW03_DIR = DIR_RETRIEVAL_STATIC / "152.252/"
+
+DATA_FOR_INGESTION = [
+    { "collection_name" : "159.341", "subject_folder" : DATA_RAW01_DIR },
+    { "collection_name" : "158.337", "subject_folder" : DATA_RAW02_DIR },
+    { "collection_name" : "152.252", "subject_folder" : DATA_RAW03_DIR }
+]
+
 DATA_CHROMA_DB_DIR = DIR_DATA / "chroma/"
 
 FILE_TYPE_ANY = ".*"
